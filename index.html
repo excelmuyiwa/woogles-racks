@@ -17,25 +17,25 @@ body {
 }
 
 .name {
-    font-size: 36px;
+    font-size: 26px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .rack {
     display: flex;
     justify-content: center;
-    gap: 2px;
+    gap: 1px;
 }
 
 .tile {
-    width: 62px;
-    height: 62px;
+    width: 48px;
+    height: 48px;
 
-    background: #efd7a7;
-    border: 1px solid #d5bc8d;
+    background: #d9d0db;
+    border: 1px solid #b9b0bc;
 
-    border-radius: 10px;
+    border-radius: 4px;
 
     display: flex;
     align-items: center;
@@ -43,22 +43,20 @@ body {
 
     position: relative;
 
-    font-size: 38px;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: 600;
     color: #222;
-
-    box-shadow:
-        0 1px 2px rgba(0,0,0,.25),
-        inset 0 1px 0 rgba(255,255,255,.5);
 }
 
 .point {
     position: absolute;
-    right: 7px;
-    bottom: 5px;
 
-    font-size: 12px;
-    font-weight: 600;
+    right: 4px;
+    bottom: 2px;
+
+    font-size: 11px;
+    font-weight: 500;
+
     color: #444;
 }
 </style>
@@ -117,7 +115,7 @@ function renderRack(elementId, rack) {
         const tile = document.createElement("div");
         tile.className = "tile";
 
-        tile.textContent = letter;
+       tile.textContent = letter === "?" ? "" : letter;
 
         const point = document.createElement("span");
         point.className = "point";
