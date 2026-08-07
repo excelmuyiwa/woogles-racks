@@ -154,11 +154,11 @@ onValue(ref(db, "spectator"), (snapshot) => {
     if (!data) return;
 
     document.getElementById("testData").textContent =
-`${data.topPlayer.name}
+`${data.topPlayer.name} (${data.topPlayer.clock})
  ${data.topPlayer.score}
  -
  ${data.bottomPlayer.score}
- ${data.bottomPlayer.name}
+ ${data.bottomPlayer.name} (${data.bottomPlayer.clock})
  | Bag:${data.tilesInBag}
  | V:${data.vowels}
  | C:${data.consonants}`;
