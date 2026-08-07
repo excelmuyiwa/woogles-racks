@@ -56,6 +56,20 @@ body {
     box-sizing: border-box;
 }
 
+#topName,
+#topScore,
+#topClock,
+#bottomName,
+#bottomScore,
+#bottomClock,
+#bag,
+#vowels,
+#consonants {
+    color: yellow;
+    font-size: 28px;
+    margin: 10px;
+}
+    
 .point {
     position: absolute;
 
@@ -72,9 +86,17 @@ body {
 
 <body>
 
-<div id="testData" style="font-size:24px; color:yellow;">
-Loading...
-</div>
+<div id="topName"></div>
+<div id="topScore"></div>
+<div id="topClock"></div>
+
+<div id="bottomName"></div>
+<div id="bottomScore"></div>
+<div id="bottomClock"></div>
+
+<div id="bag"></div>
+<div id="vowels"></div>
+<div id="consonants"></div>
 
 <div class="player">
     <div class="name">Player A</div>
@@ -153,15 +175,32 @@ onValue(ref(db, "spectator"), (snapshot) => {
 
     if (!data) return;
 
-    document.getElementById("testData").textContent =
-`${data.topPlayer.name} (${data.topPlayer.clock})
- ${data.topPlayer.score}
- -
- ${data.bottomPlayer.score}
- ${data.bottomPlayer.name} (${data.bottomPlayer.clock})
- | Bag:${data.tilesInBag}
- | V:${data.vowels}
- | C:${data.consonants}`;
+document.getElementById("topName").textContent =
+    data.topPlayer.name;
+
+document.getElementById("topScore").textContent =
+    data.topPlayer.score;
+
+document.getElementById("topClock").textContent =
+    data.topPlayer.clock;
+
+document.getElementById("bottomName").textContent =
+    data.bottomPlayer.name;
+
+document.getElementById("bottomScore").textContent =
+    data.bottomPlayer.score;
+
+document.getElementById("bottomClock").textContent =
+    data.bottomPlayer.clock;
+
+document.getElementById("bag").textContent =
+    `Bag: ${data.tilesInBag}`;
+
+document.getElementById("vowels").textContent =
+    `Vowels: ${data.vowels}`;
+
+document.getElementById("consonants").textContent =
+    `Consonants: ${data.consonants}`;
 
 });
 
