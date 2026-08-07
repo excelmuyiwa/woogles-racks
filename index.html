@@ -55,20 +55,6 @@ body {
 
     box-sizing: border-box;
 }
-
-#topName,
-#topScore,
-#topClock,
-#bottomName,
-#bottomScore,
-#bottomClock,
-#bag,
-#vowels,
-#consonants {
-    color: yellow;
-    font-size: 28px;
-    margin: 10px;
-}
     
 .point {
     position: absolute;
@@ -124,102 +110,88 @@ body {
     letter-spacing: 2px;
 }
 .playerCard {
-    width: 360px;
+    width: 340px;
 
-    background: linear-gradient(
-        180deg,
-        #07163d 0%,
-        #04102c 100%
-    );
+    background: #111827;
 
-    border: 2px solid #1f4fb6;
-    border-radius: 18px;
+    border: 2px solid #243244;
 
-    padding: 24px;
+    border-radius: 14px;
+
+    padding: 18px 22px;
 
     box-sizing: border-box;
 
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    box-shadow:
-        0 0 12px rgba(0,0,0,.5),
-        inset 0 1px 0 rgba(255,255,255,.08);
-}
-
-.playerName {
-    text-align: center;
-
     font-family:
+        Inter,
         "Segoe UI",
-        Arial,
         sans-serif;
 
-    font-size: 48px;
-    font-weight: 800;
-
-    color: #fff;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
-    line-height: 1;
+    transition: all .25s ease;
 }
 
-.playerBottom {
+.playerHeader {
     display: flex;
 
     justify-content: space-between;
 
     align-items: center;
+
+    margin-bottom: 12px;
 }
 
-.playerClock {
-    background: #30353d;
+.playerName {
+    color: #e5e7eb;
 
-    color: white;
+    font-size: 22px;
 
-    padding: 14px 22px;
+    font-weight: 700;
 
-    border-radius: 10px;
+    letter-spacing: .5px;
 
-    font-size: 44px;
-    font-weight: 800;
-
-    font-family:
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-    min-width: 170px;
-
-    text-align: center;
+    text-transform: uppercase;
 }
 
 .playerScore {
-    font-size: 64px;
-
-    font-weight: 900;
-
     color: white;
+
+    font-size: 42px;
+
+    font-weight: 800;
 
     line-height: 1;
 }
-.activeClock {
-    background: #d63b2e;
+
+.playerClock {
+    display: inline-block;
+
+    background: #2b3342;
 
     color: white;
 
-    box-shadow:
-        0 0 20px rgba(214,59,46,.6);
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    line-height: 1;
 }
 
 .activePlayer {
+    border-color: #00d4ff;
+
     box-shadow:
-        0 0 20px rgba(31,79,182,.5),
-        inset 0 1px 0 rgba(255,255,255,.08);
+        0 0 15px rgba(0,212,255,.35);
+}
+
+.activeClock {
+    background: #d83b31;
+
+    box-shadow:
+        0 0 12px rgba(216,59,49,.5);
 }
 </style>
 </head>
@@ -228,29 +200,29 @@ body {
 
 <div id="topCard" class="playerCard">
 
-    <div id="topName" class="playerName"></div>
+    <div class="playerHeader">
 
-    <div class="playerBottom">
-
-        <div id="topClock" class="playerClock"></div>
+        <div id="topName" class="playerName"></div>
 
         <div id="topScore" class="playerScore"></div>
 
     </div>
 
+    <div id="topClock" class="playerClock"></div>
+
 </div>
 
 <div id="bottomCard" class="playerCard">
 
-    <div id="bottomName" class="playerName"></div>
+    <div class="playerHeader">
 
-    <div class="playerBottom">
-
-        <div id="bottomClock" class="playerClock"></div>
+        <div id="bottomName" class="playerName"></div>
 
         <div id="bottomScore" class="playerScore"></div>
 
     </div>
+
+    <div id="bottomClock" class="playerClock"></div>
 
 </div>
 
