@@ -147,6 +147,17 @@ onValue(ref(db, "playerB/rack"), (snapshot) => {
     renderRack("playerB", snapshot.val() || "");
 });
 
+onValue(ref(db, "spectator"), (snapshot) => {
+
+    const data = snapshot.val();
+
+    if (!data) return;
+
+    document.getElementById("testData").textContent =
+        `${data.topPlayer.name} ${data.topPlayer.score} - ${data.bottomPlayer.score} ${data.bottomPlayer.name} | Bag:${data.tilesInBag}`;
+
+});
+
 </script>
 
 </body>
