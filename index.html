@@ -7,8 +7,9 @@
 <style>
 body {
     font-family: Arial, sans-serif;
-    background: transparent;
+    background: black;
     color: white;
+    text-align: center;
 }
 
 .player {
@@ -45,19 +46,19 @@ body {
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 
 import {
-  getDatabase,
-  ref,
-  onValue
+    getDatabase,
+    ref,
+    onValue
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBnGbM2XT7ryHhfXqjJ2G5XyTJRpP0kYR0",
-  authDomain: "woogles-racks.firebaseapp.com",
-  databaseURL: "https://woogles-racks-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "woogles-racks",
-  storageBucket: "woogles-racks.firebasestorage.app",
-  messagingSenderId: "1022537885699",
-  appId: "1:1022537885699:web:d1ab1e85190ee93344c636"
+    apiKey: "AIzaSyBnGbM2XT7ryHhfXqjJ2G5XyTJRpP0kYR0",
+    authDomain: "woogles-racks.firebaseapp.com",
+    databaseURL: "https://woogles-racks-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "woogles-racks",
+    storageBucket: "woogles-racks.firebasestorage.app",
+    messagingSenderId: "1022537885699",
+    appId: "1:1022537885699:web:d1ab1e85190ee93344c636"
 };
 
 const app = initializeApp(firebaseConfig);
