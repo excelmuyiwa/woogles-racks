@@ -123,19 +123,90 @@ body {
 
     letter-spacing: 2px;
 }
+.scoreboard {
+    width: 300px;
+
+    background: #0c1633;
+
+    border: 2px solid #1f3c7a;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin: 20px auto;
+
+    box-sizing: border-box;
+}
+
+.playerName {
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: white;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.scoreRow {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.clock {
+    background: #c9362a;
+
+    color: white;
+
+    font-size: 36px;
+
+    font-weight: bold;
+
+    padding: 8px 16px;
+
+    border-radius: 6px;
+}
+
+.score {
+    color: white;
+
+    font-size: 56px;
+
+    font-weight: bold;
+}
     
 </style>
 </head>
 
 <body>
 
-<div id="topName"></div>
-<div id="topScore"></div>
-<div id="topClock"></div>
+<div class="scoreboard">
 
-<div id="bottomName"></div>
-<div id="bottomScore"></div>
-<div id="bottomClock"></div>
+    <div id="topName" class="playerName"></div>
+
+    <div class="scoreRow">
+        <div id="topClock" class="clock"></div>
+        <div id="topScore" class="score"></div>
+    </div>
+
+</div>
+
+<div class="scoreboard">
+
+    <div id="bottomName" class="playerName"></div>
+
+    <div class="scoreRow">
+        <div id="bottomClock" class="clock"></div>
+        <div id="bottomScore" class="score"></div>
+    </div>
+
+</div>
 
 <div id="bag"></div>
 <div id="vowels"></div>
