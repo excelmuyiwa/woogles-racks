@@ -207,30 +207,49 @@ body {
 
     line-height: 1;
 }
-    
+.activeClock {
+    background: #d63b2e;
+
+    color: white;
+
+    box-shadow:
+        0 0 20px rgba(214,59,46,.6);
+}
+
+.activePlayer {
+    box-shadow:
+        0 0 20px rgba(31,79,182,.5),
+        inset 0 1px 0 rgba(255,255,255,.08);
+}
 </style>
 </head>
 
 <body>
 
-<div class="scoreboard">
+<div id="topCard" class="playerCard">
 
     <div id="topName" class="playerName"></div>
 
-    <div class="scoreRow">
-        <div id="topClock" class="clock"></div>
-        <div id="topScore" class="score"></div>
+    <div class="playerBottom">
+
+        <div id="topClock" class="playerClock"></div>
+
+        <div id="topScore" class="playerScore"></div>
+
     </div>
 
 </div>
 
-<div class="scoreboard">
+<div id="bottomCard" class="playerCard">
 
     <div id="bottomName" class="playerName"></div>
 
-    <div class="scoreRow">
-        <div id="bottomClock" class="clock"></div>
-        <div id="bottomScore" class="score"></div>
+    <div class="playerBottom">
+
+        <div id="bottomClock" class="playerClock"></div>
+
+        <div id="bottomScore" class="playerScore"></div>
+
     </div>
 
 </div>
