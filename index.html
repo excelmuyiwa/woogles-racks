@@ -97,6 +97,7 @@ body {
 <div id="bag"></div>
 <div id="vowels"></div>
 <div id="consonants"></div>
+<div id="unseenTiles"></div>
 
 <div class="player">
     <div class="name">Player A</div>
@@ -201,6 +202,9 @@ document.getElementById("vowels").textContent =
 
 document.getElementById("consonants").textContent =
     `Consonants: ${data.consonants}`;
+    
+document.getElementById("unseenTiles").textContent =
+    data.unseenTiles?.join(" ") || "";
 
 });
 
