@@ -154,7 +154,14 @@ onValue(ref(db, "spectator"), (snapshot) => {
     if (!data) return;
 
     document.getElementById("testData").textContent =
-        `${data.topPlayer.name} ${data.topPlayer.score} - ${data.bottomPlayer.score} ${data.bottomPlayer.name} | Bag:${data.tilesInBag}`;
+`${data.topPlayer.name}
+ ${data.topPlayer.score}
+ -
+ ${data.bottomPlayer.score}
+ ${data.bottomPlayer.name}
+ | Bag:${data.tilesInBag}
+ | V:${data.vowels}
+ | C:${data.consonants}`;
 
 });
 
